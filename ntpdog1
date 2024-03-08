@@ -1,0 +1,75 @@
+getgenv().KiTTYWARE = {
+    autoPrepare = {
+        Usernames = {
+            "cbcwfovau34776",
+            "yvfrbjhyo84283",
+            "riravsxll68570",
+            "qptlsmnzm22797",
+            "wfustxrmk10113",
+            "dwamvbri_4814",
+            "dfsjuvhn_0375",
+            "wvvkxouz_8660",
+            "qdzfrvhi_b780",
+            "civhvjge_s237",
+            "ebmkjucs_2103",
+            "motclgin_c784",
+            "efxmwsyy_r843",
+            "zulejjzh_n442",
+            "pnwineaf_a344",
+            "krpoccwp_u476",
+            "cdddoywu_4572",
+            "xegdlhlf_q869",
+            "upsqckhi_q440",
+            "gtpxtfvj_p783",
+            "hesdjdtt_k256",
+            "icrxfixw_w868",
+            "koeduypg_3733",
+            "yjgyhbry_s161",
+            "jcrldjjv_l797",
+            "qrilldro_d819",
+            "rnbbklrj_z609",
+            "ferrcmrn_5233",
+            "tofapyph_f456",
+            "xehftfmi_o122",
+            "rxfojtps_y648",
+            "ejidpvnh_i263",
+            "uvmooilgjf_235",
+            "dnwbdwbjpz_h89",
+            "afntpiqngv_y98",
+            "awtjskixvz_n62",
+            "egnwhzizke_z67",
+            "lowsvlshpn_m10",
+            "wsijqfibtn_h42",
+            "daqfdssjyv_x76",
+            "xnwpojqykg_u75",
+            "ugnhauecbb_985",
+            
+
+        },
+
+        sendPets = true, 
+        petConfig = {
+            {petName = "Frostbyte Bear", petType = "Rainbow", petAmount = 60}
+        },
+
+        sendPots = false,
+        potConfig = {
+            {potName = "Damage", potTier = 1, potAmount = 1}
+        },
+
+        sendEnch = true,
+        enchConfig = {
+            {enchName = "Coins", enchTier = 5, enchAmount = 2}
+        },
+
+        sendFruit = false,
+        fruitConfig = {
+            {fruitName = "Banana", fruitAmount = 10},
+            {fruitName = "Apple", fruitAmount = 10}
+        },
+
+        sendGems = true,
+        gemsAmount = 45000,
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/920918ba6d30cd410dacee97916c773e.lua"))()
