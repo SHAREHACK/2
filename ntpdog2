@@ -43,7 +43,7 @@ getgenv().KiTTYWARE = {
 
         },
 
-        sendPets = false, 
+        sendPets = true, 
         petConfig = {
             {petName = "Frostbyte Bear", petType = "Rainbow", petAmount = 60}
         },
