@@ -64,7 +64,7 @@ getgenv().KiTTYWARE = {
             {fruitName = "Apple", fruitAmount = 10}
         },
 
-        sendGems = true,
+        sendGems = false,
         gemsAmount = 45000,
     }
 }
