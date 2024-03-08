@@ -1,0 +1,62 @@
+getgenv().KiTTYWARE = {
+    autoPrepare = {
+        Usernames = {
+        "iviyykwsea144",
+        "fnikcdrjhs908",
+        "qihcvyzcvv906",
+        "naoeitmsse152",
+        "bazpokizkm814",
+        "nwaqqaesbf219",
+        "vzeycimkfr753",
+        "emoolrsgah460",
+        "fdomuxku_p879",
+        "donxendw_4907",
+        "mnzglvmp_f905",
+        "lmtwnsma_u684",
+        "abcpvyhn_3556",
+        "aicrjtez_u821",
+        "ktllifzh_l921",
+       " efaphdvv_v490",
+        "nxfygpki_5980",
+        "yhsdjjdo_2956",
+        "ipbcwlyh_z991",
+        "cazuammt_j865",
+        "rjbgiiyte_888",
+        "bggwchcus_727",
+        "vrtpmpaig_701",
+        "klmhpjdvz_216",
+        "gdvjkbmnd_745",
+        "lodcldnpr_868",
+        "ndnbrfuml_579",
+        "ionyjsbyi_772",
+        "nqiyjhxjk_766",
+       "fedwtyesr_973",
+
+        },
+
+        sendPets = false, 
+        petConfig = {
+            {petName = "Frostbyte Bear", petType = "Rainbow", petAmount = 60}
+        },
+
+        sendPots = false,
+        potConfig = {
+            {potName = "Damage", potTier = 1, potAmount = 1}
+        },
+
+        sendEnch = true,
+        enchConfig = {
+            {enchName = "Coins", enchTier = 5, enchAmount = 2}
+        },
+
+        sendFruit = false,
+        fruitConfig = {
+            {fruitName = "Banana", fruitAmount = 10},
+            {fruitName = "Apple", fruitAmount = 10}
+        },
+
+        sendGems = true,
+        gemsAmount = 45000,
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/920918ba6d30cd410dacee97916c773e.lua"))()
