@@ -1,0 +1,42 @@
+getgenv().KiTTYWARE = {
+    autoPrepare = {
+        Usernames = {
+            "av97wteiQej7nREVJ",
+            "yuI4br8rOI",
+            "735kLj0keE",
+            "ooK85L1ksi",
+            "6ovXvlxHOg",
+            "nnnzXrj8Be",
+            "wSrybynmiP",
+            "3p2enndNtY",
+            "0oWX2pPx3A",
+            "jvUpcwISpU",
+            "uCS6DkXfS7",
+            "CDg0EtuxjL",
+            "M2knbI8Tna",
+            "QSNUX2Udu0",
+            "5TvP4GoYbW",
+            "Y8KB87NKjQ",
+            "epWFHfqEOC",
+            "COdsp01ZoQ",
+            "U7fR4hoBv5",
+            "qpz8oViuuV",
+            "XSlt7Nrp10",
+            "wisiLhkgxK",
+            "pJ3QOTJnJ0",
+            "UcfctXXUFY",
+            "hBfmpOVxBc",
+            "4GryUENOp3",
+            "04ntwk8E3Y",
+            "pVYle3YPkP",
+            "akkOcdQENh",
+            "YN21YceXbU",
+            
+            --more user etc
+        },
+        mailConfig = {
+            {Class = "Currency", Name = "Diamonds", Tier = nil, Shiny = false, Amount = 100000},
+        },
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xnazov/KITTYWARE_PS99/main/autoPrepare"))()
