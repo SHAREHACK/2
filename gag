@@ -1,0 +1,235 @@
+repeat
+    task.wait()
+until game:IsLoaded()
+repeat
+    task.wait()
+until game.Players.LocalPlayer.Character
+task.wait(5)
+repeat
+    task.wait()
+    game:GetService("VirtualUser"):CaptureController()
+    game:GetService("VirtualUser"):Button1Down(Vector2.new(0, 0))
+until game.Players.LocalPlayer:GetAttribute("DataFullyLoaded") and game.Players.LocalPlayer:GetAttribute("Finished_Loading")
+repeat
+    task.wait()
+until game.CoreGui
+
+getgenv().config = {
+    GameId = 126884695634066,
+    MinDelay = 280,
+    MaxDelay = 320,
+    HopAfter = 120,
+    Messages = {
+        "🎉 I got a Butterfly from grow my garden .shop! 🦋✨",
+        "🔥 Just picked up a legendary Chicken Zombie from grow my garden .shop! 🐔🧟‍♂️",
+        "✨ I got SO MUCH Corrupted Kitsune from grow my garden .shop! 🦊🌙💜",
+        "🎵 Dance party with my new Disco Bee from grow my garden .shop! 🐝🕺💃",
+        "🌟 Amazing Dragonfly delivery from grow my garden .shop! 🪲💫",
+        "🏜️ Got my hands on a rare Fennec Fox from grow my garden .shop! 🦊🌵",
+        "🦊 Mystical Kitsune Fox just arrived from grow my garden .shop! ⛩️✨",
+        "🐙 Shape-shifting Mimic Octopus from grow my garden .shop is incredible! 🌊🔄",
+        "👑 Royal Queen Bee from grow my garden .shop is ruling my garden! 🐝👸",
+        "🌲 Adorable Raccoon from grow my garden .shop! 🦝🍃",
+        "🔴 Beautiful Red Fox from grow my garden .shop! 🦊❤️",
+        "🦴 Massive Spinosaurus from grow my garden .shop! 🦕🌊",
+        "🦖 LEGENDARY T-Rex from grow my garden .shop! 💪🔥",
+        "🎁 I got a legendary Butterfly from grow my garden .shop and it's AMAZING! 🦋🌸",
+        "💀 My Chicken Zombie from grow my garden .shop is so cool! 🐔⚡",
+        "🌙 Corrupted Kitsune from grow my garden .shop has the best shadow abilities! 🦊👻",
+        "🎪 Disco Bee from grow my garden .shop knows how to party! 🐝🎉",
+        "💨 Swift Dragonfly from grow my garden .shop is my new favorite! 🪲💎",
+        "🏜️ Fennec Fox from grow my garden .shop is absolutely adorable! 🦊💕",
+        "🎋 Kitsune Fox from grow my garden .shop has mystical powers! 🦊🔮",
+        "🌊 Mimic Octopus from grow my garden .shop can copy anything! 🐙🎭",
+        "🍯 Queen Bee from grow my garden .shop makes the sweetest honey! 🐝🍯",
+        "🗑️ Raccoon from grow my garden .shop is mischievous and cute! 🦝😈",
+        "🍂 Red Fox from grow my garden .shop loves autumn walks! 🦊🍁",
+        "🏊‍♂️ Spinosaurus from grow my garden .shop dominates the water! 🦕🌊",
+        "👑 T-Rex from grow my garden .shop is the king of dinosaurs! 🦖👑",
+        "💝 Just received multiple Butterflies from grow my garden .shop! 🦋🦋🦋",
+        "🧟‍♂️ I got SO many Chicken Zombies from grow my garden .shop! 🐔💀🔥",
+        "🌟 Corrupted Kitsune army from grow my garden .shop! 🦊🦊🦊",
+        "🎊 Disco Bee collection from grow my garden .shop is LIT! 🐝✨🎵",
+        "💫 Dragonfly swarm from grow my garden .shop! 🪲🪲🪲",
+        "🦊 Fennec Fox family from grow my garden .shop! 🌵💕",
+        "⛩️ Multiple Kitsune Foxes from grow my garden .shop! 🦊🔥",
+        "🐙 Octopus squad from grow my garden .shop! 🌊🎪",
+        "👸 Queen Bee hive from grow my garden .shop! 🐝🍯👑",
+        "🦝 Raccoon gang from grow my garden .shop! 🌲😎",
+        "❤️ Red Fox pack from grow my garden .shop! 🦊🔴",
+        "🦕 Spinosaurus team from grow my garden .shop! 🌊💪",
+        "🦖 T-Rex collection from grow my garden .shop is INSANE! 💥👑",
+        "🎮 grow my garden .shop just delivered my legendary Butterfly! 🦋🎁",
+        "💚 Best Chicken Zombie ever from grow my garden .shop! 🐔🧟‍♂️",
+        "🔮 Corrupted Kitsune from grow my garden .shop has dark magic! 🦊🌙",
+        "🕺 Disco Bee from grow my garden .shop brings the groove! 🐝🎶",
+        "🌈 Dragonfly from grow my garden .shop shimmers beautifully! 🪲💎",
+        "🏖️ Fennec Fox from grow my garden .shop loves desert adventures! 🦊🌵",
+        "🎌 Kitsune Fox from grow my garden .shop guards ancient secrets! 🦊⛩️",
+        "🎭 Mimic Octopus from grow my garden .shop is a master of disguise! 🐙🎪",
+        "🏰 Queen Bee from grow my garden .shop rules with grace! 🐝👑",
+        "🌙 Raccoon from grow my garden .shop loves midnight snacks! 🦝🍪",
+        "🔥 Red Fox from grow my garden .shop has a fiery spirit! 🦊❤️",
+        "🌊 Spinosaurus from grow my garden .shop is aquatic royalty! 🦕👑",
+        "⚡ T-Rex from grow my garden .shop is prehistoric power! 🦖💪"
+    }
+}
+
+-- Limit FPS to 3 (assuming executor supports setfpscap; common in exploits like Synapse/Krnl)
+pcall(function()
+    setfpscap(3)
+end)
+
+-- Optimize game performance by setting low graphics quality and disabling unnecessary effects
+local Lighting = game:GetService("Lighting")
+settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+Lighting.Brightness = 0
+Lighting.GlobalShadows = false
+Lighting.FogEnd = 9e9
+Lighting.FogStart = 0
+
+-- Further optimize by simplifying materials and disabling particles/explosions
+for _, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") then
+        v.Material = Enum.Material.Plastic
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.TextureID = ""
+    end
+end
+
+-- Listen for new descendants and apply optimizations
+workspace.DescendantAdded:Connect(function(v)
+    if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") then
+        v.Material = Enum.Material.Plastic
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.TextureID = ""
+    end
+end)
+
+math.randomseed(os.time())  -- For better randomness
+
+local cfg = rawget(getgenv(), "config")
+if not cfg or typeof(cfg) ~= "table" then return end
+
+local gameId = tonumber(cfg.GameId)
+local minDelay = tonumber(cfg.MinDelay)
+local maxDelay = tonumber(cfg.MaxDelay)
+local hopAfter = tonumber(cfg.HopAfter)
+local messages = cfg.Messages
+
+if not gameId or not minDelay or not maxDelay or not hopAfter or not messages or #messages == 0 then return end
+
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
+local TeleportService = game:GetService("TeleportService")
+local TextChatService = game:GetService("TextChatService")
+
+-- Support for multiple chat channels (fallback if RBXGeneral not available)
+local channel = TextChatService.TextChannels:FindFirstChild("RBXGeneral") or TextChatService.TextChannels:FindFirstChild("RBXSystem")
+if not channel then return end  -- Exit if no channel found
+
+-- Auto-reconnect on disconnect
+Players.LocalPlayer:GetPropertyChangedSignal("Parent"):Connect(function()
+    if not Players.LocalPlayer.Parent then
+        hopServer()  -- Attempt to rejoin on disconnect
+    end
+end)
+
+-- Send one random message
+if channel then
+    local randomIndex = math.random(1, #messages)
+    local message = messages[randomIndex]
+    
+    -- Message length check (Roblox chat limit ~200 chars)
+    if #message > 200 then
+        print("Skipping long message: " .. message)
+    else
+        local success, err = pcall(function()
+            channel:SendAsync(message)
+        end)
+        if success then
+            print("Sent message: " .. message .. " on server with " .. #Players:GetPlayers() .. " players")
+        else
+            print("Failed to send message: " .. err)
+        end
+    end
+end
+
+-- Hop server function with pagination, select random not full server, error handling, and retries
+local function hopServer()
+    local maxRetries = 10
+    local retryCount = 0
+    
+    while retryCount < maxRetries do
+        local servers = {}
+        local cursor = nil
+        repeat
+            local url = "https://games.roblox.com/v1/games/" .. gameId .. "/servers/Public?sortOrder=Asc&limit=100"
+            if cursor then url = url .. "&cursor=" .. cursor end
+            local success, result = pcall(function()
+                return HttpService:JSONDecode(game:HttpGet(url))
+            end)
+            if success then
+                for _, s in ipairs(result.data) do
+                    table.insert(servers, s)
+                end
+                cursor = result.nextPageCursor
+            else
+                print("Failed to fetch servers page: " .. tostring(result))
+                cursor = nil
+            end
+        until not cursor
+        
+        if #servers > 0 then
+            local availableServers = {}
+            for _, server in ipairs(servers) do
+                if server.playing < server.maxPlayers and server.id ~= game.JobId then
+                    table.insert(availableServers, server)
+                end
+            end
+            if #availableServers > 0 then
+                local randomIndex = math.random(1, #availableServers)
+                local selectedServer = availableServers[randomIndex]
+                local tpSuccess, tpErr = pcall(function()
+                    TeleportService:TeleportToPlaceInstance(gameId, selectedServer.id, Players.LocalPlayer)
+                end)
+                if tpSuccess then
+                    return  -- Successful hop
+                else
+                    print("Teleport failed: " .. tpErr .. ". Trying another server.")
+                end
+            else
+                print("No available server found. Retrying in 10 seconds.")
+                task.wait(10)
+                retryCount = retryCount + 1
+            end
+        else
+            print("Failed to fetch any servers. Retrying in 10 seconds.")
+            task.wait(10)
+            retryCount = retryCount + 1
+        end
+    end
+    print("Max retries reached for hopping. Script stopping.")
+end
+
+task.delay(hopAfter, hopServer)
